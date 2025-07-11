@@ -1,0 +1,80 @@
+# ────────────────────────────────────────────────
+# Python
+# ────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.manifest
+*.spec
+# Logs
+*.log
+logs/
+# Config/credentials
+.env
+.env.*
+!.env.example         # conserva un ejemplo si tienes variables de entorno
+
+# ────────────────────────────────────────────────
+# Entornos virtuales
+# ────────────────────────────────────────────────
+venv/
+.env/                 # por si el venv se llama .env
+.venv/
+
+# ────────────────────────────────────────────────
+# IDEs y editores
+# ────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-*
+*.code-workspace
+*.swp
+*~
+
+# ────────────────────────────────────────────────
+# Datos generados por la app
+# ────────────────────────────────────────────────
+# Índice FAISS (se vuelve a crear con ingest.py)
+db/
+# Archivos temporales de ingestión
+tmp_ingest/
+# Cachés de herramientas (p.ej. langchain, transformers)
+.cache/
+~/.cache/             # si lo alojas dentro del proyecto
+
+# ────────────────────────────────────────────────
+# Documentos y datos grandes
+# ────────────────────────────────────────────────
+#   Ajusta según tu política:
+#   - Conserva 1–2 PDFs de ejemplo para facilitar onboarding.
+#   - Ignora corpus real (se carga en el servidor).
+documentos/*.pdf
+documentos/*.docx
+documentos/*.txt
+!documentos/README.md     # explicación de cómo añadir documentos
+
+# ────────────────────────────────────────────────
+# Ollama
+# ────────────────────────────────────────────────
+# Los modelos viven en ~/.ollama – fuera del repo.
+# Si por alguna razón los guardas localmente, ignóralos:
+*.bin
+*.gguf
+
+# ────────────────────────────────────────────────
+# Docker artefacts (si usas contenedores)
+# ────────────────────────────────────────────────
+*.tar
+docker-compose.override.yml
+
+# ────────────────────────────────────────────────
+# Otros
+# ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
