@@ -78,3 +78,9 @@ docker-compose.override.yml
 # ────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
+
+# Archivos subidos por los usuarios durante desarrollo
+media/
+
+# Carpeta generada por `collectstatic` en local
+staticfiles/
