@@ -17,6 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+from chatapi.views import ChatView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #jwt auuth endpoints
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+
+    #chat endpoint
+    path('api/chat/', ChatView.as_view(), name='chat'),
 ]
